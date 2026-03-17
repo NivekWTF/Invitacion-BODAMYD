@@ -1,0 +1,9 @@
+services:
+  invitacion-boda:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: invitacion-boda
+    restart: unless-stopped
+    ports:
+      - "${APP_PORT:-80}:80"

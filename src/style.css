@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+/* ===== Custom Theme ===== */
+@theme {
+  --color-primary: #6A7050;
+  --color-secondary: #8B926A;
+  --color-bg-linen: #F9F7F2;
+  --color-text-main: #333333;
+  --color-gold: #C5A059;
+
+  --font-script: 'Great Vibes', cursive;
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Montserrat', sans-serif;
+}
+
+/* ===== Animations ===== */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes envelopeOpen {
+  0% { transform: rotateX(0deg); }
+  100% { transform: rotateX(180deg); }
+}
+
+@keyframes countPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease-out both;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out both;
+}
+
+.animate-count-pulse {
+  animation: countPulse 2s ease-in-out infinite;
+}
+
+/* ===== Torn Paper Effect ===== */
+.torn-paper-edge {
+  clip-path: polygon(
+    0% 0%, 100% 0%, 100% 95%,
+    95% 100%, 90% 96%, 85% 100%, 80% 95%, 75% 99%,
+    70% 94%, 65% 98%, 60% 95%, 55% 99%, 50% 94%,
+    45% 98%, 40% 95%, 35% 99%, 30% 94%, 25% 98%,
+    20% 95%, 15% 99%, 10% 95%, 5% 99%, 0% 95%
+  );
+}
+
+.torn-paper-edge-top {
+  clip-path: polygon(
+    0% 5%, 5% 1%, 10% 5%, 15% 1%, 20% 5%, 25% 2%,
+    30% 6%, 35% 1%, 40% 5%, 45% 2%, 50% 6%, 55% 1%,
+    60% 5%, 65% 2%, 70% 6%, 75% 1%, 80% 5%, 85% 0%,
+    90% 4%, 95% 0%, 100% 5%, 100% 100%, 0% 100%
+  );
+}
+
+/* ===== Envelope Styles ===== */
+.envelope-container {
+  perspective: 800px;
+}
+
+.envelope-flap {
+  transform-origin: top center;
+  transition: transform 1s ease-in-out;
+  backface-visibility: hidden;
+}
+
+.envelope-flap.open {
+  transform: rotateX(180deg);
+}
+
+.letter-card {
+  transition: transform 1.2s ease-in-out 0.4s, opacity 0.8s ease-in-out 0.3s;
+}
+
+.letter-card.rise {
+  transform: translateY(-120px);
+  opacity: 1;
+}
+
+/* ===== Linen Texture Overlay ===== */
+.linen-overlay {
+  background-image: url('https://www.transparenttextures.com/patterns/linen.png');
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #F9F7F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #6A7050;
+  border-radius: 2px;
+}
+
+/* ===== Smooth scroll ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
