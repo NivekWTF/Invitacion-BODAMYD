@@ -1,0 +1,28 @@
+services:
+  invitacion-boda-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: invitacion-boda-app
+    restart: unless-stopped
+
+  caddy:
+    image: caddy:2.8-alpine
+    container_name: invitacion-boda-caddy
+    restart: unless-stopped
+    depends_on:
+      - invitacion-boda-app
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      - DOMAIN=${DOMAIN}
+      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
+    volumes:
+      - ./docker/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  caddy_data:
+  caddy_config:
