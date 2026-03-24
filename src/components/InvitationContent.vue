@@ -229,6 +229,25 @@
       </div>
     </section>
 
+    <!-- ========== MESA DE REGALOS ========== -->
+    <section class="w-full py-12 flex flex-col items-center px-4 space-y-6">
+      <div class="w-2/3 border-b border-primary/20 mb-2"></div>
+      <span class="material-symbols-outlined text-4xl text-primary opacity-60">redeem</span>
+      <h3 class="font-serif text-xl uppercase tracking-[0.2em] text-primary">Mesa de Regalos</h3>
+      <p class="font-serif text-base text-gray-600 text-center leading-relaxed max-w-xs px-4">
+        Si deseas hacernos un regalo, hemos preparado una mesa de regalos para ti.
+      </p>
+      <a
+        href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51975759"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bg-primary text-white font-serif uppercase tracking-[0.15em] text-xs px-8 py-3 rounded-sm shadow-md hover:bg-secondary transition-colors duration-300 flex items-center gap-2 no-underline"
+      >
+        <span class="material-symbols-outlined text-sm">card_giftcard</span>
+        Ver Mesa de Regalos
+      </a>
+    </section>
+
     <!-- ========== CONFIRMACIÓN ========== -->
     <footer class="w-full bg-primary/10 mt-auto pt-16 pb-20 px-8 text-center relative overflow-hidden">
       <!-- Decorative background -->
