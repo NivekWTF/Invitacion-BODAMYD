@@ -6,4 +6,4 @@ services:
     container_name: invitacion-boda-dokploy
     restart: unless-stopped
     ports:
-      - "${APP_BIND:-0.0.0.0}:${APP_PORT:-8085}:88"
+      - "${APP_BIND:-0.0.0.0}:${APP_PORT:-8089}:88"
