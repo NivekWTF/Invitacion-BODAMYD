@@ -289,7 +289,7 @@ import grandezzaImg from '../assets/grandezza.png'
 import formalImg from '../assets/formal.svg'
 
 // Wedding date: April 18, 2026, 2:00 PM
-const weddingDate = new Date('2026-04-18T14:00:00')
+const weddingDate = new Date('2026-04-18T16:00:00')
 
 const countdown = ref({
   days: 0,
